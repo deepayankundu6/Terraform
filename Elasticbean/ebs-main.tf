@@ -34,16 +34,6 @@ resource "aws_elastic_beanstalk_environment" "example" {
   application         = aws_elastic_beanstalk_application.example.name
   solution_stack_name = "64bit Amazon Linux 2023 v6.0.2 running Node.js 18"
   setting {
-    namespace = "aws:elasticbeanstalk:container:nodejs"
-    name      = "NodeCommand"
-    value     = "npm start"
-  }
-#   setting {
-#     namespace = "aws:elasticbeanstalk:environment"
-#     name      = "PORT"
-#     value     = "3000"
-#   }
-  setting {
     namespace = "aws:elasticbeanstalk:application:environment"
     name      = "NODE_ENV"
     value     = "production"
